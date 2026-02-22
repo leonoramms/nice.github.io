@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-branding">
+        <a href="{{ '/' | relative_url }}" class="site-logo-link">
+          <div class="logo-circle">NICE</div>
+        </a>
+        <div class="site-title-block">
+          <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+          <span class="site-subtitle">Danish Instrumentation at CERN</span>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li class="nav-item{% if page.url == '/' %} active{% endif %}">
+          <a href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        {% assign nav_pages = site.header_pages %}
+        {% for nav_path in nav_pages %}
+          {% assign nav_page = site.pages | where: "path", nav_path | first %}
+          {% if nav_page %}
+            <li class="nav-item{% if page.url == nav_page.url %} active{% endif %}">
+              <a href="{{ nav_page.url | relative_url }}">{{ nav_page.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {% if page.url != "/" %}
+    <div class="page-hero">
+      <div class="container">
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+      </div>
+    </div>
+    {% endif %}
+    {% if page.url == "/" %}
+      {{ content }}
+    {% else %}
+      <div class="container content-wrap">
+        {{ content }}
+      </div>
+    {% endif %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>NICE</h3>
+        <p>National Instruments Center<br>for CERN Experiments</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="{{ '/about' | relative_url }}">About NICE</a></li>
+          <li><a href="{{ '/members' | relative_url }}">Members</a></li>
+          <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+          <li><a href="https://cern.ch" target="_blank" rel="noopener">CERN</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="{{ '/news' | relative_url }}">News</a></li>
+          <li><a href="{{ '/outreach' | relative_url }}">Outreach &amp; Education</a></li>
+          <li><a href="{{ '/meetings' | relative_url }}">Meetings &amp; Minutes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; {{ 'now' | date: "%Y" }} National Instruments Center for CERN Experiments &mdash;
+        Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.site-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+title: NICE – National Instruments Center for CERN Experiments
+description: >-
+  The National Instruments Center for CERN Experiments (NICE) supports Danish
+  participation in experiments at CERN, coordinating instrumentation R&D,
+  funding, and outreach activities.
+baseurl: ""
+url: "https://leonoramms.github.io"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation pages
+header_pages:
+  - about.md
+  - funding.md
+  - members.md
+  - meetings.md
+  - experiments.md
+  - cern.md
+  - outreach.md
+  - industry.md
+  - news.md
+  - contact.md
+
+# Social
+email: nice@example.dk
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
