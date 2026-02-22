@@ -94,7 +94,14 @@
       transition: background 0.2s, transform 0.1s;
     }
 
-    .btn:hover { background: #bf0426; transform: translateY(-2px); }
+    .btn:hover { background: #bf0426; 
+                border-color: #1d4ed8;
+                transform: translateY(-2px); }
+
+    .btn:focus {
+      outline: 3px solid rgba(37, 99, 235, 0.35);
+      outline-offset: 2px;
+    }
 
     /* ── About strip ── */
     .about {
@@ -159,15 +166,15 @@
     }
 
     .card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block; /* makes the whole card clickable */
-}
+      text-decoration: none;
+      color: inherit;
+      display: block; /* makes the whole card clickable */
+    }
 
-.card-link:focus-visible {
-  outline: 3px solid #bf0426;
-  outline-offset: 4px;
-}
+    .card-link:focus-visible {
+      outline: 3px solid #bf0426;
+      outline-offset: 4px;
+    }
 
     .card p { color: #555; font-size: 0.95rem; }
 
@@ -241,7 +248,8 @@
       NICE supports Danish researchers in utilizing CERN's accelerator and detector infrastructure. 
       Current activities include ALICE, ALPHA, ATLAS, CAST and ISOLDE.
     </p>
-    <a href="#research">Learn more</a>
+    
+    <a href="#research" class="btn">Learn more</a>
   </section>
 
   <!-- About -->
