@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About NICE – NICE</title>
+  <style>
+    /* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #ffe8ec;
+      background: #ffe8ec;
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    header {
+      background: #fff;
+      color: #b00020;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    header .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #b00020;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    header .logo img { height: 36px; width: auto; }
+
+    header .logo span { color: #b00020; }
+
+    nav a {
+      color: #b00020;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #b00020; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #6f0014 0%, #b00020 60%, #e53952 100%);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Content ── */
+    .content {
+      background: #fff;
+      color: #444;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .content figure {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .content figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .content p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .content ul {
+      margin: 0 0 1.25rem 1.5rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .content a { color: #b00020; }
+    .content a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: #bf0426;
+      color: #eecccc;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    footer .contact-info { margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <a class="logo" href="/"><img src="../assets/NICE LOGO 1.pdf" alt="NICE logo" /><span>NICE</span></a>
+    <nav>
+      <a href="/nice.github.io/">Home</a>
+      <a href="/nice.github.io/#research">More</a>
+      <a href="/#news">News</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Funding</h1>
+  </section>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- TODO: uncomment and set src to the correct funding image path when available -->
+    <!--<figure>
+      <img src="PATH_TO_FUNDING_IMAGE" alt="Funding" />
+    </figure>-->
+
+    <p>
+      <strong>
+        NICE is the National Instrument Center for CERN in Denmark. The purpose of NICE is to support and promote the utilization of CERN and its accelerator, technical and scientific infrastructures by Danish researchers, students and others and make possible their participation in experiments and R&D at CERN.
+      </strong>
+    </p>
+
+    <p>
+      About 200 Danish researchers and graduate students use CERN, either directly as members of the experiments or work on theory related to CERN physics.
+    </p>
+
+    <p>
+      NICE is a ’følgeforskningscenter’ (research follow-up center) that presently operates on the basis of a grant from the Danish Agency for Higher Education and Science (UFM, in Danish: Uddannelses- og Forskningsstyrelsen (UFS): ufm.dk
+    </p>
+    <p>
+      Since Denmark, as one of the founders of CERN, ratified the CERN convention (http://council.web.cern.ch/council/en/governance/convention.html) in 1953, targeted funding has been provided to ensure optimal usage and exploitation of the Danish CERN membership.
+    </p>
+    <p>
+      Initially the ’følgeforskning’ was an item on the national budget. From the late 1990’ties to 2013, NICE (and its precursor organizations) operated under DFF (the Danish Council for Independent Research).  
+      Since 2014 NICE operates under the Agency for Higher Education and Science, Technology and Innovation with guidance from the NUFI committee (‘Nationalt Udvalg for Forskningsinfrastruktur’).
+    </p>
+    
+    <p><strong>NICE Mandate:</strong></p>
+
+    <ul>
+      <li>
+        To monitor and provide advice on ongoing Danish scientific activities related to CERN.
+      </li>
+
+      <li>
+        To act as a sparring partner and source of inspiration for the board.
+      </li>
+
+      <li>
+         To ensure the broadest possible Danish utilisation of Denmark’s CERN membership, including exploring and promoting opportunities to increase the participation of Danish researchers in CERN’s programmes within both experiment and theory.
+      </li>
+
+      <li>
+        To promote engineering and industrial participation, as well as Danish return value.
+      </li>
+
+      <li>
+        To contribute to the development of national strategies concerning Big Science, in particular accelerator-based research.
+      </li>
+
+      <li>
+        To consider new national and international developments and serve as an advisory body for academic circles as well as for public authorities.
+      </li>
+
+      <li>
+        To promote interdisciplinary utilisation and dissemination of CERN-related activities, including advanced computing (e.g., HPC, GRID, and Big Data).
+      </li>
+
+      <li>
+        To promote knowledge transfer and education, including planning unifying activities in Denmark.
+      </li>
+    </ul>
+
+    <p><strong>Members and Organization:</strong></p>
+
+    <p>
+      The NICE board (‘bestyrelse’) consists of all group leaders (or their representatives) of ongoing experiments at CERN that have Danish participation. 
+      The board has established an executive committee consisting of 3 members to handle daily matters in an efficient manner.
+    </p>
+
+    <a href="#research" class="btn">Learn more</a>
+
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="contact-info">
+      <strong>Contact NICE</strong><br />
+      Email: <a href="mailto:nice@example.dk">nice@example.dk</a>
+    </div>
+    <div>
+      &copy; 2026 National Instruments Center for CERN Experiments (NICE), Denmark
+    </div>
+  </footer>
+
+</body>
+</html>
