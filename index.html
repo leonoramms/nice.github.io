@@ -17,7 +17,7 @@
 
     /* ── Navigation ── */
     header {
-      background: #0b3d91;
+      background: #b00020;
       color: #fff;
       padding: 0 2rem;
       display: flex;
@@ -36,12 +36,17 @@
       letter-spacing: 0.05em;
       color: #fff;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    header .logo span { color: #ffd700; }
+    header .logo img { height: 36px; width: auto; }
+
+    header .logo span { color: #fff; }
 
     nav a {
-      color: #cde;
+      color: rgba(255,255,255,0.85);
       text-decoration: none;
       margin-left: 1.5rem;
       font-size: 0.95rem;
@@ -207,7 +212,7 @@
 
   <!-- Navigation -->
   <header>
-    <a class="logo" href="#"><span>NICE</span></a>
+    <a class="logo" href="#"><img src="assets/nice-logo.png" alt="NICE logo" /><span>NICE</span></a>
     <nav>
       <a href="#about">About</a>
       <a href="#research">Research</a>
