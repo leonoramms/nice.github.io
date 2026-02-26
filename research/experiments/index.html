@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiments – NICE</title>
+  <style>
+    /* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #ffe8ec;
+      background: #ffe8ec;
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    header {
+      background: #fff;
+      color: #b00020;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+     header .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #e53952;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    header .logo img { height: 36px; width: auto; }
+
+    header .logo span { color: #e53952; }
+
+    nav a {
+      color: #b00020;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #b00020; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #6f0014 0%, #b00020 60%, #e53952 100%);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Content ── */
+    .content {
+      background: #fff;
+      color: #444;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .content figure {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .content figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .content p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .content ul {
+      margin: 0 0 1.25rem 1.5rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .content a { color: #b00020; }
+    .content a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: #bf0426;
+      color: #eecccc;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    footer .contact-info { margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <a class="logo" href="/"><img src="../../assets/NICE LOGO 1.pdf" alt="NICE logo" /><span>NICE</span></a>
+    <nav>
+      <a href="/nice.github.io/">Home</a>
+      <a href="/nice.github.io/#research">More</a>
+      <a href="/#news">News</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Experiments and Research</h1>
+  </section>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- TODO: uncomment and set src to the correct funding image path when available -->
+    <!--<figure>
+      <img src="PATH_TO_FUNDING_IMAGE" alt="Funding" />
+    </figure>-->
+
+    <p>
+      <strong>
+        Danish groups currently participate in the following experiments at CERN. 
+        Follow the links for more information about the experiments and the international collaborations.  
+      </strong>
+    </p>
+ <p></p> 
+    
+
+
+ 
+
+
+
+
+
+
+
+
+
+    <p><strong>NICE funds:</strong></p>
+
+    <ul>
+      <li>
+        <strong>ALICE:</strong> Physics of the Quark Gluon Plasma and the strong interaction.
+        https://alice-collaboration.web.cern.ch
+      </li>
+
+      <li>
+        <strong>ATLAS:</strong> Test of the standard model (SM), Higgs, and searches for physics beyond the SM.
+        https://atlas.cern  
+      </li>
+
+      <li>
+        <strong>ISOLDE:</strong> Reactions with beams far from stability.
+        https://isolde.web.cern.ch  
+      </li>
+
+      <li>
+        <strong>ALPHA:</strong> Formation and properties of antihydrogen.
+        https://alpha.web.cern.ch 
+      </li>
+      
+       <li>
+        <strong>CAST:</strong> Axion search.
+        https://home.cern/science/experiments/cast  
+      </li>
+      
+       <li>
+        <strong>NA63:</strong> Strong EM fields.
+         https://home.cern/science/experiments/na63
+      </li>
+      
+    </ul>
+
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="contact-info">
+      <strong>Contact NICE</strong><br />
+      Email: <a href="mailto:nice@example.dk">nice@example.dk</a>
+    </div>
+    <div>
+      &copy; 2026 National Instruments Center for CERN Experiments (NICE), Denmark
+    </div>
+  </footer>
+
+</body>
+</html>
