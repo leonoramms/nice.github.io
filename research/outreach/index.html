@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outreach and Education – NICE</title>
+  <style>
+    /* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #ffe8ec;
+      background: #ffe8ec;
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    header {
+      background: #fff;
+      color: #b00020;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+     header .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #e53952;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    header .logo img { height: 36px; width: auto; }
+
+    header .logo span { color: #e53952; }
+
+    nav a {
+      color: #b00020;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #b00020; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #6f0014 0%, #b00020 60%, #e53952 100%);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Content ── */
+    .content {
+      background: #fff;
+      color: #444;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .content figure {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .content figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .content p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .content ul {
+      margin: 0 0 1.25rem 1.5rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .content a { color: #b00020; }
+    .content a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: #bf0426;
+      color: #eecccc;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    footer .contact-info { margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <a class="logo" href="/"><img src="../../assets/NICE LOGO 1.pdf" alt="NICE logo" /><span>NICE</span></a>
+    <nav>
+      <a href="/nice.github.io/">Home</a>
+      <a href="/nice.github.io/#research">More</a>
+      <a href="/#news">News</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Outreach and education</h1>
+  </section>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- TODO: uncomment and set src to the correct image path when available -->
+    <!--<figure>
+      <img src="PATH_TO_IMAGE" alt="Funding" />
+    </figure>-->
+
+    <p>
+      <strong>
+        The <a href="https://home.web.cern.ch/summer-student-programme">CERN Summer Student Programme</a> offers undergraduate students of physics, computing and engineering a unique opportunity to join in the day-to-day work of research teams participating in experiments at CERN in Geneva, Switzerland.
+      </strong>
+    </p>
+
+    <p>
+      Beyond the outstanding first-class scientific value of their stay, the selected students will find working in a multidisciplinary and multicultural environment an extremely enriching personal experience. 
+      It is a once-in-a-lifetime opportunity to make valuable, long-lasting contacts with other students and scientists from across Europe.
+    </p>
+
+
+    <p><strong>Visit CERN:</strong></p>
+
+    <p>
+      DanishHigh   school classes visit CERN every year in large numbers: In recent years about 900 Danish high school students have visited CERN either by contacting the CERN visits office or by contacting NICE researchers.
+    </p>
+
+    <p>
+      Read about the school visit programme <a href="https://visit.cern/group-bookings">here</a>.
+    </p>
+
+    <p><strong>High School classes can propose an experiment at CERN:</strong></p>
+
+    <p>Propose an experiment at CERN and carry it out with real high-energy beam.</p>
+
+    <p>
+      NICE encourages Danish High School classes and their teachers to develop proposals. NICE will evaluate proposals that don’t make it to the final at CERN and award a prize for the best project proposal.
+    </p>
+
+     <p>Read about the CERN beam lines for schools project <a href="https://beamlineforschools.cern">here</a>.</p>
+
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="contact-info">
+      <strong>Contact NICE</strong><br />
+      Email: <a href="mailto:nice@example.dk">nice@example.dk</a>
+    </div>
+    <div>
+      &copy; 2026 National Instruments Center for CERN Experiments (NICE), Denmark
+    </div>
+  </footer>
+
+</body>
+</html>
