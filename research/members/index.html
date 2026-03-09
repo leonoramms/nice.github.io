@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members and Organisation – NICE</title>
+  <style>
+    /* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #ffe8ec;
+      background: #ffe8ec;
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    header {
+      background: #fff;
+      color: #b00020;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+     header .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #e53952;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    header .logo img { height: 36px; width: auto; }
+
+    header .logo span { color: #e53952; }
+
+    nav a {
+      color: #b00020;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #b00020; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #6f0014 0%, #b00020 60%, #e53952 100%);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Content ── */
+    .content {
+      background: #fff;
+      color: #444;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .content figure {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .content figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .content p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .content ul {
+      margin: 0 0 1.25rem 1.5rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .content a { color: #b00020; }
+    .content a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: #bf0426;
+      color: #eecccc;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    footer .contact-info { margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <a class="logo" href="/"><img src="../../assets/NICE LOGO 1.pdf" alt="NICE logo" /><span>NICE</span></a>
+    <nav>
+      <a href="/nice.github.io/">Home</a>
+      <a href="/nice.github.io/#research">More</a>
+      <a href="/#news">News</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Members and Organisation</h1>
+  </section>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- TODO: uncomment and set src to the correct image path when available -->
+    <!--<figure>
+      <img src="PATH_TO_IMAGE" alt="Funding" />
+    </figure>-->
+
+    <p>
+      <strong>
+        About 200 researchers and graduate students in Denmark use CERN either by contributing and participating directly in the experiments or by carrying out theoretical work related to CERN physics.
+      </strong>
+    </p>
+
+    <p>
+      The organisation of NICE is schematically depicted in the following organisation chart. Five Danish Universities are directly represented.
+    </p>
+
+  <!-- ORGANISAION DIAGRAM GOES HERE -->
+
+    <p>  
+      The NICE board (‘bestyrelse’) comprises all group leaders (or their representatives) of ongoing experiments at CERN with Danish participation. 
+      The board has established an executive committee of 3 members to handle daily matters efficiently.
+    </p>
+
+    <p>
+      The board has established an advisory committee (‘følgegruppe’) that includes representatives from Industry, the Big Science secretariat, computing, etc., with the following mandate.
+    </p>
+
+    <p><strong>Mandate of the NICE group:</strong></p>
+
+    <ul>
+      <li>
+        To monitor and provide advice on ongoing Danish scientific activities related to CERN.
+      </li>
+
+      <li>
+        To act as a sparring partner and source of inspiration for the board.
+      </li>
+
+      <li>
+        To ensure the broadest possible Danish utilisation of Denmark’s CERN membership, including exploring and promoting opportunities to increase the participation of Danish researchers in CERN’s programmes within both experiment and theory.
+      </li>
+
+      <li>
+        To promote engineering and industrial participation, as well as Danish return value.
+      </li>
+
+      <li>
+        To contribute to the development of national strategies concerning Big Science, in particular accelerator-based research.
+      </li>
+
+      <li>
+        To consider new national and international developments and serve as an advisory body for academic circles as well as for public authorities.
+      </li>
+
+      <li>
+        To promote interdisciplinary utilisation and dissemination of CERN-related activities, including advanced computing (e.g., HPC, GRID, and Big Data).
+      </li>
+
+      <li>
+        To promote knowledge transfer and education, including planning unifying activities in Denmark.
+      </li>
+    </ul>
+
+    <p><strong>Current composition of the board:</strong></p>
+
+    <ul>
+      <li>
+        Centre director and chair of the board: Professor Ian Bearden, KU, NBI
+      </li>
+      <li>
+        Vice chair: Associate Professor Karsten Riisager, AU, IFA
+      </li>
+    </ul>
+
+
+    <p>
+      Additional members:
+    </p>
+
+    <ul>
+      <li>
+        Professor Ulrik Uggerhøj, AU, IFA
+      </li>
+      <li>
+        Professor Jeff Hangst, AU, IFA
+      </li>
+      <li>
+        Associate Professor Karsten Riisager, AU, IFA.
+      </li>
+      <li>
+        Associate Professor Stefania Xella , KU, NBI
+      </li>
+    </ul>
+
+    <p><strong>Current composition of the Executive Committe:</strong></p>    
+    <ul>
+      <li>
+        NAME 1
+      </li>
+      <li>
+        NAME 2
+      </li>
+    </ul>
+
+
+    <p><strong>Current composition of the advisory group:</strong></p>
+
+    <ul>
+      <li> 
+        Chair: Professor Ulrik Uggerhøj, AU, IFA.
+      </li>
+    </ul>
+    
+    <p>Additional members:</p>
+
+    <ul>
+      <li>
+        Office manager Johnny Mogensen, FI, UFM.
+      </li>
+      <li>
+        CEO Jørgen Kunter Pedersen, Danfysik A/S
+      </li>
+      <li>
+        Daily Center manager, ph.d. Nikolaj Zangenberg
+      </li>
+      <li>
+        Professor Jens Jørgen Gaardhøje, KU, NBI.
+      </li>
+      <li>
+        Associate professor Stefania Xella, KU, NBI
+      </li>
+      <li>
+        Senior researcher Josva Kleist, AAU.
+      </li>
+      <li>
+        Head of department Jan W. Thomsen, KU, NBI.
+      </li>
+      <li>
+        Deputy director Steen Pedersen, DTU, IT.
+      </li>
+    </ul>
+
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="contact-info">
+      <strong>Contact NICE</strong><br />
+      Email: <a href="mailto:nice@example.dk">nice@example.dk</a>
+    </div>
+    <div>
+      &copy; 2026 National Instruments Center for CERN Experiments (NICE), Denmark
+    </div>
+  </footer>
+
+</body>
+</html>
