@@ -290,14 +290,14 @@
 
 .article h1 {
   color: #b00020;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3.75vw, 2.25rem);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .article .lead {
   color: #555;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.7;
 }
 
