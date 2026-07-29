@@ -375,7 +375,13 @@
     const newsList = document.getElementById("news-list");
 
     try {
-      const response = await fetch("./news/news.json");
+      const articles = await response.json();
+
+      articles.sort((articleA, articleB) =>
+        articleB.published.localeCompare(articleA.published)
+      );
+
+const latestArticles = articles.slice(0, 3);
 
       if (!response.ok) {
         throw new Error(`Could not load news: ${response.status}`);
