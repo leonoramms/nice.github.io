@@ -1,1 +1,14 @@
-
+[
+  {
+    "date": "July 2026",
+    "title": "New NICE research update",
+    "description": "NICE researchers have published a new update about their work at CERN.",
+    "url": "/nice.github.io/news/research-update/"
+  },
+  {
+    "date": "June 2026",
+    "title": "Upcoming NICE event",
+    "description": "Information about the next NICE event will be announced shortly.",
+    "url": "/nice.github.io/news/upcoming-event/"
+  }
+]
