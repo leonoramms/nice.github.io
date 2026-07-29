@@ -375,7 +375,7 @@
     const newsList = document.getElementById("news-list");
 
     try {
-      const response = await fetch("/news/news.json");
+      const response = await fetch("./news/news.json");
 
       if (!response.ok) {
         throw new Error(`Could not load news: ${response.status}`);
