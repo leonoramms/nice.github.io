@@ -1,3 +1,267 @@
+/* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      background: #b00020;
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    header {
+      background: #fff;
+      color: #b00020;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 128px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    header .logo {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #b00020;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    header .logo img { height: 120px; width: auto; }
+
+    header .logo span { color: #b00020; }
+
+    nav a {
+      color: #b00020;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #b00020; }
+
+    /* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #750217 0%, #b00020 60%, #750217 100%);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-block;
+      width: auto; 
+      background: #fff;
+      color: #750217;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn:hover { background: #b00020;
+                color: #fff;
+                border-color: #750217;
+                transform: translateY(-2px); }
+
+    .btn:focus {
+      outline: 3px solid rgba(37, 99, 235, 0.35);
+      outline-offset: 2px;
+    }
+
+    /* ── button stile 2: ── */
+
+    .btn2 {
+      display: inline-block;
+      width: auto; 
+      background: #b00020;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn2:hover { background: #fff;
+                color: #b00020;
+                border-color: #750217;
+                transform: translateY(-2px); }
+
+    .btn2:focus {
+      outline: 3px solid rgba(37, 99, 235, 0.35);
+      outline-offset: 2px;
+    }
+
+    /* ── About strip ── */
+    .about {
+      background: #fff;
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 1.75rem;
+      color: #b00020;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #444; 
+      font-size: 1rem;
+    }
+
+    /* ── Research areas ── */
+    .research {
+      padding: 3.5rem 2rem;
+      background: #b00020;
+      color: #fff;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .research h2 {
+      font-size: 1.75rem;
+      color: #bf0426;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .research h5 {
+      font-size: 1.75rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      border-top: 4px solid #bf0426;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: #bf0426;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block; /* makes the whole card clickable */
+    }
+
+    .card-link:focus-visible {
+      outline: 3px solid #bf0426;
+      outline-offset: 4px;
+    }
+
+    .card p { color: #555; font-size: 0.95rem; }
+
+    /* ── News section ── */
+    .news {
+      background: #fff;
+      padding: 3.5rem 2rem;
+    }
+
+    .news-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .news h2 {
+      font-size: 1.75rem;
+      color: #c41635;
+      margin-bottom: 1.5rem;
+    }
+
+    .news-item {
+      border-left: 4px solid #c41635;
+      padding: 0.5rem 0 0.5rem 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .news-item .date {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 0.2rem;
+    }
+
+    .news-item h4 { color: #c41635; margin-bottom: 0.25rem; }
+
+    .news-item p { color: #555; font-size: 0.95rem; }
+
+      /* --- News ---*/
+  .news-item h4 a {
+    color: #c41635;
+    text-decoration: none;
+  }
+
+  .news-item h4 a:hover {
+    text-decoration: underline;
+  }
+
+    /* ── Footer ── */
+    footer {
+      background: #750217;
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    footer .contact-info { margin-bottom: 0.75rem; }
+
+
 /* ── News article pages ── */
 
 .article-page {
