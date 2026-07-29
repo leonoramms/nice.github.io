@@ -370,23 +370,20 @@
     </div>
   </footer>
 
+
 <script>
   async function loadNews() {
     const newsList = document.getElementById("news-list");
 
     try {
-      const articles = await response.json();
-
-      articles.sort((articleA, articleB) =>
-        articleB.published.localeCompare(articleA.published)
-      );
-
-const latestArticles = articles.slice(0, 3);
+      // Load news.json
+      const response = await fetch("./news/news.json");
 
       if (!response.ok) {
         throw new Error(`Could not load news: ${response.status}`);
       }
 
+      // Convert the JSON response into an array
       const articles = await response.json();
 
       if (!Array.isArray(articles) || articles.length === 0) {
@@ -394,21 +391,38 @@ const latestArticles = articles.slice(0, 3);
         return;
       }
 
-      newsList.innerHTML = articles
+      // Sort articles newest first
+      articles.sort((articleA, articleB) =>
+        articleB.published.localeCompare(articleA.published)
+      );
+
+      // Only show the three newest articles
+      const latestArticles = articles.slice(0, 3);
+
+      // Add the articles to the news panel
+      newsList.innerHTML = latestArticles
         .map(article => `
           <article class="news-item">
-            <div class="date">${escapeHtml(article.date)}</div>
+            <div class="date">
+              ${escapeHtml(article.date)}
+            </div>
+
             <h4>
-              <a href="${escapeHtml(article.url)}">
+              <a href="./news/${escapeHtml(article.path)}">
                 ${escapeHtml(article.title)}
               </a>
             </h4>
-            <p>${escapeHtml(article.description)}</p>
+
+            <p>
+              ${escapeHtml(article.description)}
+            </p>
           </article>
         `)
         .join("");
+
     } catch (error) {
-      console.error(error);
+      console.error("News loading error:", error);
+
       newsList.innerHTML =
         "<p>News could not be loaded. Please try again later.</p>";
     }
