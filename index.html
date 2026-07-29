@@ -340,27 +340,14 @@
     </div>
   </section>
 
-  <!-- News -->
-  <section class="news" id="news">
-    <div class="news-inner">
-      <h2>Latest News</h2>
-      <!-- <div class="news-item">
-        <div class="date">February 2026</div>
-        <h4>NICE website launched</h4>
-        <p>Our new website is live! Stay tuned for updates on projects, publications, and events.</p>
-      </div>
-      <div class="news-item">
-        <div class="date">January 2026</div>
-        <h4>New detector prototype submitted for testing at CERN</h4>
-        <p>The latest silicon strip detector prototype developed at NICE has been shipped to CERN for beam tests.</p>
-      </div>
-      <div class="news-item">
-        <div class="date">December 2025</div>
-        <h4>NICE team presents results at IEEE NSS-MIC</h4>
-        <p>Members of NICE presented four contributions on detector R&amp;D at the IEEE Nuclear Science Symposium.</p>
-      </div> -->
+<section class="news" id="news">
+  <div class="news-inner">
+    <h2>Latest News</h2>
+    <div id="news-list">
+      <p>Loading news...</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer / Contact -->
   <footer id="contact">
@@ -373,5 +360,52 @@
     </div>
   </footer>
 
+<script>
+  async function loadNews() {
+    const newsList = document.getElementById("news-list");
+
+    try {
+      const response = await fetch("./news.json");
+
+      if (!response.ok) {
+        throw new Error(`Could not load news: ${response.status}`);
+      }
+
+      const articles = await response.json();
+
+      if (!Array.isArray(articles) || articles.length === 0) {
+        newsList.innerHTML = "<p>No news is currently available.</p>";
+        return;
+      }
+
+      newsList.innerHTML = articles
+        .map(article => `
+          <article class="news-item">
+            <div class="date">${escapeHtml(article.date)}</div>
+            <h4>
+              <a href="${escapeHtml(article.url)}">
+                ${escapeHtml(article.title)}
+              </a>
+            </h4>
+            <p>${escapeHtml(article.description)}</p>
+          </article>
+        `)
+        .join("");
+    } catch (error) {
+      console.error(error);
+      newsList.innerHTML =
+        "<p>News could not be loaded. Please try again later.</p>";
+    }
+  }
+
+  function escapeHtml(value) {
+    const element = document.createElement("div");
+    element.textContent = String(value ?? "");
+    return element.innerHTML;
+  }
+
+  loadNews();
+</script>
+  
 </body>
 </html>
