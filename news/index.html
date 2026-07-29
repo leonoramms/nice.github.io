@@ -1,1 +1,191 @@
-all news here, divided by year
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>News | NICE</title>
+
+  <meta
+    name="description"
+    content="News, publications and updates from the National Instrument Centre for CERN Experiments."
+  >
+
+  <link rel="stylesheet" href="./article.css">
+</head>
+
+<body>
+
+  <header>
+    <a class="logo" href="../index.html">
+      <img
+        src="../assets/NICE LOGO 1.pdf"
+        alt="NICE logo"
+      >
+      <span>NICE</span>
+    </a>
+
+    <nav>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#research">More</a>
+      <a href="./index.html" aria-current="page">News</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../ForMembers/index.html">Members Portal</a>
+    </nav>
+  </header>
+
+  <main class="news-archive-page">
+
+    <section class="news-archive-header">
+      <div class="news-archive-header-inner">
+        <p class="section-label">NICE news</p>
+
+        <h1>News and updates</h1>
+
+        <p>
+          Publications, events and updates from NICE and the Danish
+          particle-physics community.
+        </p>
+      </div>
+    </section>
+
+    <section class="news-archive">
+      <div id="news-archive-list">
+        <p class="loading-message">Loading news...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <div class="contact-info">
+      <strong>Contact NICE</strong><br>
+
+      Email:
+      <a href="mailto:nice@example.dk">nice@example.dk</a>
+    </div>
+
+    <div>
+      &copy; 2026 National Instrument Center for CERN Experiments
+      (NICE), Denmark
+    </div>
+  </footer>
+
+  <script>
+    async function loadNewsArchive() {
+      const archiveList =
+        document.getElementById("news-archive-list");
+
+      try {
+        const response = await fetch("./news.json");
+
+        if (!response.ok) {
+          throw new Error(
+            `Could not load news: ${response.status}`
+          );
+        }
+
+        const articles = await response.json();
+
+        if (!Array.isArray(articles) || articles.length === 0) {
+          archiveList.innerHTML =
+            "<p>No news is currently available.</p>";
+          return;
+        }
+
+        // Newest articles first
+        articles.sort((articleA, articleB) =>
+          articleB.published.localeCompare(articleA.published)
+        );
+
+        // Group articles by year
+        const articlesByYear = articles.reduce(
+          (groups, article) => {
+            const year = article.published.slice(0, 4);
+
+            if (!groups[year]) {
+              groups[year] = [];
+            }
+
+            groups[year].push(article);
+            return groups;
+          },
+          {}
+        );
+
+        const years = Object.keys(articlesByYear)
+          .sort((yearA, yearB) => Number(yearB) - Number(yearA));
+
+        archiveList.innerHTML = years
+          .map(year => createYearSection(
+            year,
+            articlesByYear[year]
+          ))
+          .join("");
+
+      } catch (error) {
+        console.error(error);
+
+        archiveList.innerHTML = `
+          <p class="error-message">
+            News could not be loaded. Please try again later.
+          </p>
+        `;
+      }
+    }
+
+    function createYearSection(year, articles) {
+      const articleCards = articles
+        .map(article => `
+          <article class="archive-news-item">
+            <div class="archive-news-date">
+              ${escapeHtml(article.date)}
+            </div>
+
+            <h2>
+              <a href="./${escapeHtml(article.path)}">
+                ${escapeHtml(article.title)}
+              </a>
+            </h2>
+
+            <p>
+              ${escapeHtml(article.description)}
+            </p>
+
+            <a
+              class="read-more-link"
+              href="./${escapeHtml(article.path)}"
+              aria-label="Read more about ${escapeHtml(article.title)}"
+            >
+              Read more →
+            </a>
+          </article>
+        `)
+        .join("");
+
+      return `
+        <section class="news-year">
+          <h2 class="news-year-heading">${escapeHtml(year)}</h2>
+
+          <div class="news-year-grid">
+            ${articleCards}
+          </div>
+        </section>
+      `;
+    }
+
+    function escapeHtml(value) {
+      const element = document.createElement("div");
+      element.textContent = String(value ?? "");
+      return element.innerHTML;
+    }
+
+    loadNewsArchive();
+  </script>
+
+</body>
+</html>
